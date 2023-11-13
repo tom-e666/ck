@@ -74,7 +74,7 @@
             label9 = new Label();
             txtBed = new Guna.UI2.WinForms.Guna2ComboBox();
             label10 = new Label();
-            txtRoomType = new Guna.UI2.WinForms.Guna2ComboBox();
+            txtRoom = new Guna.UI2.WinForms.Guna2ComboBox();
             label11 = new Label();
             txtRoomNo = new Guna.UI2.WinForms.Guna2ComboBox();
             label12 = new Label();
@@ -352,7 +352,7 @@
             txtBed.Font = new Font("Segoe UI", 10F, FontStyle.Regular, GraphicsUnit.Point);
             txtBed.ForeColor = Color.Black;
             txtBed.ItemHeight = 30;
-            txtBed.Items.AddRange(new object[] { "Single", "Double", "Triple" });
+            txtBed.Items.AddRange(new object[] { "Đơn", "Đôi", "Ba" });
             txtBed.Location = new Point(1332, 150);
             txtBed.Name = "txtBed";
             txtBed.ShadowDecoration.CustomizableEdges = customizableEdges44;
@@ -370,25 +370,25 @@
             label10.TabIndex = 17;
             label10.Text = "Loại Giường";
             // 
-            // txtRoomType
+            // txtRoom
             // 
-            txtRoomType.BackColor = Color.Transparent;
-            txtRoomType.CustomizableEdges = customizableEdges45;
-            txtRoomType.DrawMode = DrawMode.OwnerDrawFixed;
-            txtRoomType.DropDownStyle = ComboBoxStyle.DropDownList;
-            txtRoomType.FocusedColor = Color.FromArgb(94, 148, 255);
-            txtRoomType.FocusedState.BorderColor = Color.FromArgb(94, 148, 255);
-            txtRoomType.Font = new Font("Segoe UI", 10F, FontStyle.Regular, GraphicsUnit.Point);
-            txtRoomType.ForeColor = Color.Black;
-            txtRoomType.ItemHeight = 30;
-            txtRoomType.Items.AddRange(new object[] { "AC", "Non-AC" });
-            txtRoomType.Location = new Point(1332, 278);
-            txtRoomType.Name = "txtRoomType";
-            txtRoomType.ShadowDecoration.CustomizableEdges = customizableEdges46;
-            txtRoomType.Size = new Size(515, 36);
-            txtRoomType.Style = Guna.UI2.WinForms.Enums.TextBoxStyle.Material;
-            txtRoomType.TabIndex = 20;
-            txtRoomType.SelectedIndexChanged += guna2ComboBox3_SelectedIndexChanged;
+            txtRoom.BackColor = Color.Transparent;
+            txtRoom.CustomizableEdges = customizableEdges45;
+            txtRoom.DrawMode = DrawMode.OwnerDrawFixed;
+            txtRoom.DropDownStyle = ComboBoxStyle.DropDownList;
+            txtRoom.FocusedColor = Color.FromArgb(94, 148, 255);
+            txtRoom.FocusedState.BorderColor = Color.FromArgb(94, 148, 255);
+            txtRoom.Font = new Font("Segoe UI", 10F, FontStyle.Regular, GraphicsUnit.Point);
+            txtRoom.ForeColor = Color.Black;
+            txtRoom.ItemHeight = 30;
+            txtRoom.Items.AddRange(new object[] { "AC", "non_AC" });
+            txtRoom.Location = new Point(1332, 278);
+            txtRoom.Name = "txtRoom";
+            txtRoom.ShadowDecoration.CustomizableEdges = customizableEdges46;
+            txtRoom.Size = new Size(515, 36);
+            txtRoom.Style = Guna.UI2.WinForms.Enums.TextBoxStyle.Material;
+            txtRoom.TabIndex = 20;
+            txtRoom.SelectedIndexChanged += txtRoomType_SelectedIndexChanged;
             // 
             // label11
             // 
@@ -497,7 +497,7 @@
             Controls.Add(label13);
             Controls.Add(txtRoomNo);
             Controls.Add(label12);
-            Controls.Add(txtRoomType);
+            Controls.Add(txtRoom);
             Controls.Add(label11);
             Controls.Add(txtBed);
             Controls.Add(label10);
@@ -547,7 +547,7 @@
         private Label label9;
         private Guna.UI2.WinForms.Guna2ComboBox txtBed;
         private Label label10;
-        private Guna.UI2.WinForms.Guna2ComboBox txtRoomType;
+        private Guna.UI2.WinForms.Guna2ComboBox txtRoom;
         private Label label11;
         private Guna.UI2.WinForms.Guna2ComboBox txtRoomNo;
         private Label label12;

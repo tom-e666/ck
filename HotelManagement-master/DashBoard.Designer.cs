@@ -53,12 +53,16 @@
             btn_dangkikhachhang = new Guna.UI2.WinForms.Guna2Button();
             btn_themphong = new Guna.UI2.WinForms.Guna2Button();
             panel2 = new Panel();
+            uC_CustomerDetails1 = new NewFolder2.UC_CustomerDetails();
+            uC_CheckOut1 = new NewFolder2.UC_CheckOut();
             uC_KhachHang1 = new NewFolder2.UC_KhachHang();
             uC_ThemPhong1 = new NewFolder2.UC_ThemPhong();
             guna2Elipse1 = new Guna.UI2.WinForms.Guna2Elipse(components);
             guna2Elipse2 = new Guna.UI2.WinForms.Guna2Elipse(components);
             guna2Elipse3 = new Guna.UI2.WinForms.Guna2Elipse(components);
-            uC_CheckOut1 = new NewFolder2.UC_CheckOut();
+            guna2Elipse4 = new Guna.UI2.WinForms.Guna2Elipse(components);
+            guna2Elipse5 = new Guna.UI2.WinForms.Guna2Elipse(components);
+            uC_Employee1 = new NewFolder2.UC_Employee();
             panel1.SuspendLayout();
             panel2.SuspendLayout();
             SuspendLayout();
@@ -143,6 +147,7 @@
             btn_nhanvien.Size = new Size(284, 75);
             btn_nhanvien.TabIndex = 4;
             btn_nhanvien.Text = "Nhân Viên";
+            btn_nhanvien.Click += btn_nhanvien_Click;
             // 
             // btn_thongtinkhachahng
             // 
@@ -162,6 +167,7 @@
             btn_thongtinkhachahng.Size = new Size(284, 75);
             btn_thongtinkhachahng.TabIndex = 3;
             btn_thongtinkhachahng.Text = "Khách Hàng";
+            btn_thongtinkhachahng.Click += btn_thongtinkhachahng_Click;
             // 
             // btn_thanhtoan
             // 
@@ -226,6 +232,8 @@
             // panel2
             // 
             panel2.BorderStyle = BorderStyle.FixedSingle;
+            panel2.Controls.Add(uC_Employee1);
+            panel2.Controls.Add(uC_CustomerDetails1);
             panel2.Controls.Add(uC_CheckOut1);
             panel2.Controls.Add(uC_KhachHang1);
             panel2.Controls.Add(uC_ThemPhong1);
@@ -233,6 +241,22 @@
             panel2.Name = "panel2";
             panel2.Size = new Size(1850, 850);
             panel2.TabIndex = 3;
+            // 
+            // uC_CustomerDetails1
+            // 
+            uC_CustomerDetails1.BackColor = Color.White;
+            uC_CustomerDetails1.Location = new Point(-1, -1);
+            uC_CustomerDetails1.Name = "uC_CustomerDetails1";
+            uC_CustomerDetails1.Size = new Size(2352, 1065);
+            uC_CustomerDetails1.TabIndex = 3;
+            // 
+            // uC_CheckOut1
+            // 
+            uC_CheckOut1.BackColor = Color.White;
+            uC_CheckOut1.Location = new Point(-1, -1);
+            uC_CheckOut1.Name = "uC_CheckOut1";
+            uC_CheckOut1.Size = new Size(2352, 1065);
+            uC_CheckOut1.TabIndex = 2;
             // 
             // uC_KhachHang1
             // 
@@ -259,13 +283,21 @@
             // 
             guna2Elipse3.TargetControl = this;
             // 
-            // uC_CheckOut1
+            // guna2Elipse4
             // 
-            uC_CheckOut1.BackColor = Color.White;
-            uC_CheckOut1.Location = new Point(-1, -1);
-            uC_CheckOut1.Name = "uC_CheckOut1";
-            uC_CheckOut1.Size = new Size(2352, 1065);
-            uC_CheckOut1.TabIndex = 2;
+            guna2Elipse4.TargetControl = this;
+            // 
+            // guna2Elipse5
+            // 
+            guna2Elipse5.TargetControl = this;
+            // 
+            // uC_Employee1
+            // 
+            uC_Employee1.BackColor = Color.White;
+            uC_Employee1.Location = new Point(-1, -1);
+            uC_Employee1.Name = "uC_Employee1";
+            uC_Employee1.Size = new Size(2352, 1065);
+            uC_Employee1.TabIndex = 4;
             // 
             // DashBoard
             // 
@@ -304,5 +336,9 @@
         private NewFolder2.UC_KhachHang uC_KhachHang1;
         private Guna.UI2.WinForms.Guna2Elipse guna2Elipse3;
         private NewFolder2.UC_CheckOut uC_CheckOut1;
+        private Guna.UI2.WinForms.Guna2Elipse guna2Elipse4;
+        private NewFolder2.UC_CustomerDetails uC_CustomerDetails1;
+        private Guna.UI2.WinForms.Guna2Elipse guna2Elipse5;
+        private NewFolder2.UC_Employee uC_Employee1;
     }
 }
