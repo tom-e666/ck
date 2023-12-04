@@ -53,6 +53,7 @@
             btn_dangkikhachhang = new Guna.UI2.WinForms.Guna2Button();
             btn_themphong = new Guna.UI2.WinForms.Guna2Button();
             panel2 = new Panel();
+            uC_Employee1 = new NewFolder2.UC_Employee();
             uC_CustomerDetails1 = new NewFolder2.UC_CustomerDetails();
             uC_CheckOut1 = new NewFolder2.UC_CheckOut();
             uC_KhachHang1 = new NewFolder2.UC_KhachHang();
@@ -62,7 +63,6 @@
             guna2Elipse3 = new Guna.UI2.WinForms.Guna2Elipse(components);
             guna2Elipse4 = new Guna.UI2.WinForms.Guna2Elipse(components);
             guna2Elipse5 = new Guna.UI2.WinForms.Guna2Elipse(components);
-            uC_Employee1 = new NewFolder2.UC_Employee();
             panel1.SuspendLayout();
             panel2.SuspendLayout();
             SuspendLayout();
@@ -242,6 +242,15 @@
             panel2.Size = new Size(1850, 850);
             panel2.TabIndex = 3;
             // 
+            // uC_Employee1
+            // 
+            uC_Employee1.BackColor = Color.White;
+            uC_Employee1.Location = new Point(-1, -1);
+            uC_Employee1.Name = "uC_Employee1";
+            uC_Employee1.Size = new Size(2352, 1065);
+            uC_Employee1.TabIndex = 4;
+            uC_Employee1.Load += uC_Employee1_Load;
+            // 
             // uC_CustomerDetails1
             // 
             uC_CustomerDetails1.BackColor = Color.White;
@@ -290,14 +299,6 @@
             // guna2Elipse5
             // 
             guna2Elipse5.TargetControl = this;
-            // 
-            // uC_Employee1
-            // 
-            uC_Employee1.BackColor = Color.White;
-            uC_Employee1.Location = new Point(-1, -1);
-            uC_Employee1.Name = "uC_Employee1";
-            uC_Employee1.Size = new Size(2352, 1065);
-            uC_Employee1.TabIndex = 4;
             // 
             // DashBoard
             // 

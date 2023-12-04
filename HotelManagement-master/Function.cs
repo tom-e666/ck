@@ -18,11 +18,7 @@ namespace HotelManagement
             string connectionString = "Data Source=(LocalDB)\\MSSQLLocalDB;AttachDbFilename=\"C:\\Users\\Admin\\OneDrive - Hochiminh City University of Education\\Documents\\bMyHotel.mdf\";Integrated Security=True;Connect Timeout=30";
             
             SqlConnection connection = new SqlConnection(connectionString);
-            connection.Open();
-            if(connection.State == ConnectionState.Open)
-            {
-                MessageBox.Show("succeed to connect");
-            }
+            
             return connection;
         }
         public DataSet getDataSet(string query)

@@ -47,6 +47,7 @@
             txt_username = new Guna.UI2.WinForms.Guna2TextBox();
             guna2HtmlLabel1 = new Guna.UI2.WinForms.Guna2HtmlLabel();
             guna2PictureBox1 = new Guna.UI2.WinForms.Guna2PictureBox();
+            label1 = new Label();
             guna2Panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)guna2PictureBox1).BeginInit();
             SuspendLayout();
@@ -54,6 +55,7 @@
             // guna2Panel1
             // 
             guna2Panel1.BackColor = Color.White;
+            guna2Panel1.Controls.Add(label1);
             guna2Panel1.Controls.Add(guna2CircleButton1);
             guna2Panel1.Controls.Add(lb_error);
             guna2Panel1.Controls.Add(btn_login);
@@ -97,6 +99,7 @@
             lb_error.Size = new Size(326, 22);
             lb_error.TabIndex = 6;
             lb_error.Text = "Thông tin đăng nhập không chính xác, vui lòng đăng nhập lại";
+            lb_error.Visible = false;
             // 
             // btn_login
             // 
@@ -190,6 +193,16 @@
             guna2PictureBox1.SizeMode = PictureBoxSizeMode.AutoSize;
             guna2PictureBox1.TabIndex = 1;
             guna2PictureBox1.TabStop = false;
+            guna2PictureBox1.Click += guna2PictureBox1_Click;
+            // 
+            // label1
+            // 
+            label1.AutoSize = true;
+            label1.Location = new Point(641, 86);
+            label1.Name = "label1";
+            label1.Size = new Size(80, 20);
+            label1.TabIndex = 8;
+            label1.Text = "tom // 123";
             // 
             // Form1
             // 
@@ -220,5 +233,6 @@
         private Guna.UI2.WinForms.Guna2Button btn_login;
         private Guna.UI2.WinForms.Guna2HtmlLabel lb_error;
         private Guna.UI2.WinForms.Guna2CircleButton guna2CircleButton1;
+        private Label label1;
     }
 }

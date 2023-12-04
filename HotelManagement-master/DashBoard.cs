@@ -22,7 +22,11 @@ namespace HotelManagement
 
         private void guna2CircleButton1_Click(object sender, EventArgs e)
         {
-            Close();
+            Application.Exit();
+            //mainForm back? ref from mainform to this form, these form does not know each other
+            
+            
+            
         }
 
         private void DashBoard_Load(object sender, EventArgs e)
@@ -72,6 +76,11 @@ namespace HotelManagement
             pn_select.Left = btn_nhanvien.Left + 10;
             uC_Employee1.Visible = true;
             uC_Employee1.BringToFront();
+        }
+
+        private void uC_Employee1_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }

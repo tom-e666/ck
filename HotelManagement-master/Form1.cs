@@ -1,7 +1,11 @@
+﻿using System.Data;
+
 namespace HotelManagement
 {
     public partial class Form1 : Form
     {
+        Function fn = new();
+        string query;
         public Form1()
         {
             InitializeComponent();
@@ -34,10 +38,30 @@ namespace HotelManagement
 
         private void btn_login_Click(object sender, EventArgs e)
         {
-            DashBoard ds = new();
-            this.Hide();
-            ds.Show();
+            if (txt_username.Text == "" || txt_passowrd.Text == "")
+            {
+                MessageBox.Show("Bạn phải nhập đầy đủ thông tin");
+                return;
+            }
+            query = $"SELECT * FROM employee WHERE username='{txt_username.Text}' AND pass='{txt_passowrd.Text}' ";
+            DataSet ds = fn.getDataSet(query);
+            if (ds.Tables[0].Rows.Count > 0)
+            {
+                DashBoard db = new();
+                db.Show();
+                db.BringToFront();
+                this.Hide();
+            }
+            else
+            {
+                lb_error.Visible = true;
+            }
 
+
+        }
+
+        private void guna2PictureBox1_Click(object sender, EventArgs e)
+        {
 
         }
     }
